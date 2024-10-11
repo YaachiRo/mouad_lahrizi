@@ -10,3 +10,5 @@ example : docker exec -it ubuntu_container bash
 this will fork a copy of the running container into a local terminal bash
 
 5: to stop the container use : docker compose down, this will stop all the services started using the compose file
+
+### PS : use sudo to run these commands btw
