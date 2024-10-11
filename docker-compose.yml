@@ -1,0 +1,20 @@
+networks:
+  my-network:
+
+volumes:
+  local-data:
+    driver: local
+    driver_opts:
+      o : "bind"
+      type : "none"
+      device : "./data"
+
+services:
+  ubuntu:
+    build : "./reqs/."
+    container_name: "ubuntu_container"
+    networks:
+      - my-network
+    volumes:
+      - "local-data:/data"
+    tty: true
